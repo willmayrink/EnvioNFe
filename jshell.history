@@ -1,0 +1,4 @@
+EXPRESSION#>mvn package -X
+EXPRESSION#>mvn
+EXPRESSION#>clear
+EXPRESSION#>cls
