@@ -86,6 +86,7 @@ private void btnFileXMLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
 </details>
 
 <h3>Reading files in a secure way 🔒</h3>
+
 <details open><summary><i>code</i></summary>
   
 ```java
@@ -100,11 +101,7 @@ private void btnFileXMLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
 
 ```
 
+> _Do not forget to create a_ ``.gitignore`` _file in your repository and add_ ``*.properties`` _, so then any property file you may have won't be uploaded to_ **GitHub**.
 
-> [!IMPORTANT]
-> Do not forget to create a .gitignore file in your repository and add *.properties, so then any property file you may have won't be uploaded to GitHub.
-
-> [!WARNING]  
-> Critical content demanding immediate user attention due to potential risks.
 </details>
 
