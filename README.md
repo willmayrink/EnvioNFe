@@ -104,6 +104,7 @@ private void btnFileXMLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
 > [!IMPORTANT]
 > Do not forget to create a .gitignore file in your repository and add *.properties, so then any property file you may have won't be uploaded to GitHub.
 
-<p><i></></p>
+> [!WARNING]  
+> Critical content demanding immediate user attention due to potential risks.
 </details>
 
