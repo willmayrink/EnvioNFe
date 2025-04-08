@@ -8,7 +8,7 @@ Application designed for sending emails using my Gmail account. The user can sen
 <br>
 <h1>Helpful snippets 💡</h1>
 <h3>Attaching XML files to a FileChooser 📬</h3>
-<details><summary><i>code</i></summary>
+<details open><summary><i>code</i></summary>
   
 ```java
 private void btnFileXMLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFileXMLActionPerformed
@@ -44,7 +44,7 @@ private void btnFileXMLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
 ```
 </details>
 <h3>Sending mails 📧</h3>
-<details><summary><i>code</i></summary>
+<details open><summary><i>code</i></summary>
   
 ```java
   private void btnSendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSendActionPerformed
@@ -86,7 +86,7 @@ private void btnFileXMLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
 </details>
 
 <h3>Reading files in a secure way 🔒</h3>
-<details><summary><i>code</i></summary>
+<details open><summary><i>code</i></summary>
   
 ```java
   Properties properties = new Properties();
