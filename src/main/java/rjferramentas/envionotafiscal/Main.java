@@ -21,6 +21,9 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
 /**
  *
  * @author Will
@@ -207,10 +210,11 @@ public class Main extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSend)
-                    .addComponent(jButton3)
-                    .addComponent(btnHelp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnHelp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnSend)
+                        .addComponent(jButton3)))
                 .addContainerGap())
         );
 
@@ -252,9 +256,17 @@ public class Main extends javax.swing.JFrame {
 
     private void btnSendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSendActionPerformed
 
-        String userMail = "will.mayrink@gmail.com";
-        String passwordMail = "jiir dqoy rcxe zsdr ";
+        String userMail = "";
+        String passwordMail = "";
         HtmlEmail mail = new HtmlEmail();
+        Properties properties = new Properties();
+        try (FileInputStream input = new FileInputStream("src/main/java/rjferramentas/envionotafiscal/config.properties")) {
+            properties.load(input);
+            userMail = properties.getProperty("usermail");
+            passwordMail = properties.getProperty("passwordmail");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         mail.setAuthenticator(new DefaultAuthenticator(userMail, passwordMail));
         mail.setHostName("smtp.gmail.com");
@@ -278,7 +290,7 @@ public class Main extends javax.swing.JFrame {
             mail.addTo(txtTo.getText());
 
             mail.setHtmlMsg("<html><h2>Olá, caro cliente.</h2> <p>Abaixo seguem anexos os arquivos <strong>XML</strong> e <strong>PDF</strong> referente a sua NF-e.</p> "
-                    + "<p>Qualquer dúvida, entre em contato com o setor financeiro da RJ de Oliveira Neto EPP.</p><br><br><p><small><strong>Telefone: (24)3322-4727</small></strong></p><html>");
+                    + "<p>Qualquer dúvida, entre em contato com o setor financeiro da RJ de Oliveira Neto EPP.</p><br><br><p><small><strong>Telefone: +55(xx)xxxx-xxxx</small></strong></p><html>");
             mail.send();
             JOptionPane.showMessageDialog(null, "E-mail enviado com sucesso!");
         } catch (Exception e) {
