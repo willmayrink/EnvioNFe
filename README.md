@@ -85,3 +85,23 @@ private void btnFileXMLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
 ```
 </details>
 
+<h3>Reading files in a secure way 🔒</h3>
+<details><summary><i>code</i></summary>
+  
+```java
+  Properties properties = new Properties();
+        try (FileInputStream input = new FileInputStream("src/main/java/rjferramentas/envionotafiscal/config.properties")) {
+            properties.load(input);
+            userMail = properties.getProperty("usermail");
+            passwordMail = properties.getProperty("passwordmail");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+```
+> [!Important]
+ Do not forget to create a .gitignore file in your repository and add *.properties, so then any property file you may have won't be uploaded to GitHub.
+
+<p><i></></p>
+</details>
+
