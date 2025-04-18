@@ -1,4 +1,4 @@
-<img height="48" width="48" src="https://cdn.simpleicons.org/apachenetbeanside" /> &nbsp;&nbsp;&nbsp; <img height="48" width="48" src="https://cdn.simpleicons.org/apachemaven" /> &nbsp;&nbsp;&nbsp; <img height="48" width="48" src="https://cdn.simpleicons.org/gmail/white" /> 
+<img height="48" width="48" src="https://cdn.simpleicons.org/maildotru/white" /> &nbsp;&nbsp;&nbsp; <img height="48" width="48" src="https://cdn.simpleicons.org/apachenetbeanside" /> &nbsp;&nbsp;&nbsp; <img height="48" width="48" src="https://cdn.simpleicons.org/apachemaven" /> 
 #
 <h3><strong>Envio de NF-e </strong><i>(NF-e Sender)</i></h3>
 
